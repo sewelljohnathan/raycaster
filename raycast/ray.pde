@@ -44,19 +44,19 @@ Ray castRay(float theta)
         dof = 0;
         while (dof < DIAGONAL_WORLD_SIZE)
         {
-        if (isInBounds(curX, curY) && !isEmptySpace(curX, curY))
-        {
-            horzFinalX = curX;
-            horzFinalY = curY;
-            horzDistance = distance(playerX, playerY, curX, curY);
-            break;
-        }
-        else
-        {
-            curX += x_offset;
-            curY += y_offset;
-            dof++;
-        }
+            if (isInBounds(curX, curY) && !isEmptySpace(curX, curY))
+            {
+                horzFinalX = curX;
+                horzFinalY = curY;
+                horzDistance = distance(playerX, playerY, curX, curY);
+                break;
+            }
+            else
+            {
+                curX += x_offset;
+                curY += y_offset;
+                dof++;
+            }
         }
         
     }
@@ -83,19 +83,19 @@ Ray castRay(float theta)
         dof = 0;
         while (dof < DIAGONAL_WORLD_SIZE)
         {
-        if (isInBounds(curX, curY) && !isEmptySpace(curX, curY))
-        {
-            vertFinalX = curX;
-            vertFinalY = curY;
-            vertDistance = distance(playerX, playerY, curX, curY);  
-            break;
-        }
-        else
-        {
-            curX += x_offset;
-            curY += y_offset;
-            dof++;
-        }
+            if (isInBounds(curX, curY) && !isEmptySpace(curX, curY))
+            {
+                vertFinalX = curX;
+                vertFinalY = curY;
+                vertDistance = distance(playerX, playerY, curX, curY);  
+                break;
+            }
+            else
+            {
+                curX += x_offset;
+                curY += y_offset;
+                dof++;
+            }
         }
         
     }
